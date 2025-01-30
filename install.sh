@@ -36,7 +36,7 @@ GetModes() {
         if  [  "$(grep '^VERSION' /etc/os-release | grep "Noble Numbat" | wc -l)" -eq "0" ]
          then
           color_echo "31;1" "This script is only stable with Ubuntu 20 or 24)"
-         else 
+         
         fi
     else
     GetModes
