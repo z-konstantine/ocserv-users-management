@@ -31,7 +31,7 @@ GetModes() {
     fi
     color_echo "36;1" "Selected mode: ${selected_mode}"
 
-    if [ "$(echo "2 3" | grep -w $mode)" ] && [ "$(grep '^VERSION' /etc/os-release | grep "Focal Fossa" | wc -l)" -eq "0" ]; then
+    if [ "$(echo "2 3" | grep -w $mode)" ] && [ "$(grep '^VERSION' /etc/os-release | grep "Focal Fossa" | wc -l)" || "$(grep '^VERSION' /etc/os-release | grep "Noble Numbat" | wc -l)" -eq "0" ]; then
         color_echo "31;1" "This script is only stable with Ubuntu 20.04(Focal Fossa)"
         GetModes
     fi
